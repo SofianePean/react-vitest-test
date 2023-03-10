@@ -10,7 +10,7 @@ export const Accordion = (props: AccordionProps) => {
   const [show, setShow] = useState(false);
 
   const onAccordionClick = () => {
-    setShow(!show);
+    setShow(!!show);
   };
 
   return (
