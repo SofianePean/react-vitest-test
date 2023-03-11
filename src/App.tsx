@@ -4,8 +4,8 @@ import { Accordion } from "./components/Accordion/Accordion";
 function App() {
   return (
     <div className="App">
-      <Accordion title="Je suis un title">
-        <div>Je suis un enfant</div>
+      <Accordion title="Title">
+        <div>Children</div>
       </Accordion>
     </div>
   );
