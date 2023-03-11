@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Accordion title="Title">
-        <div>Children</div>
+        <div>Childrens</div>
       </Accordion>
     </div>
   );
