@@ -1,31 +1,21 @@
-name: CI/CD run test
-
+name: CI
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
-
+    branches:
+      - master
+  push:
+    branches:
+      - master
+      
 jobs:
-  build:
-
+  ci:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run the tests
-      run: npm test
+        node-version: lts/*
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
