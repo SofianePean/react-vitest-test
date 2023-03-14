@@ -8,6 +8,7 @@ type AccordionProps = {
 export const Accordion = (props: AccordionProps) => {
   const { title, children } = props;
   const [show, setShow] = useState(false);
+  let toto = "toto"
 
   const onAccordionClick = () => {
     setShow(!show);
@@ -21,6 +22,7 @@ export const Accordion = (props: AccordionProps) => {
           {!show ? "Show" : "Hide"}
         </button>
       </div>
+      <p>{toto}</p>
       {show && <div>{children}</div>}
     </div>
   );
