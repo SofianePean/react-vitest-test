@@ -9,6 +9,7 @@ export const Accordion = (props: AccordionProps) => {
   const { title, children } = props;
   const [show, setShow] = useState(false);
   let toto = "toto"
+  let titi = "titi"
 
   const onAccordionClick = () => {
     setShow(!show);
