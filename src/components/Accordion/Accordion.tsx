@@ -8,9 +8,12 @@ type AccordionProps = {
 export const Accordion = (props: AccordionProps) => {
   const { title, children } = props;
   const [show, setShow] = useState(false);
-  let toto = "toto"
-  let titi = "titi"
-  let tata = "titi"
+
+  const toto = (): string => {
+    let titi = "titi"
+    let tata = "titi"
+    return tata
+  }
 
   const onAccordionClick = () => {
     setShow(!show);
