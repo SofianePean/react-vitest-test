@@ -10,6 +10,7 @@ export const Accordion = (props: AccordionProps) => {
   const [show, setShow] = useState(false);
   let toto = "toto"
   let titi = "titi"
+  let tata = "titi"
 
   const onAccordionClick = () => {
     setShow(!show);
